@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+/* WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     font-family: "Inter", sans-serif;
 }
@@ -371,10 +376,13 @@ a {
     flex-direction: column;
     gap: .5rem;
     line-height: 2.5rem;
+    max-width: 19rem;
+    width: 100%;
 }
 
 .speakers-container ul li img:nth-child(1) {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -457,10 +465,13 @@ a {
     align-items: center;
     margin: 2rem auto;
     line-height: 2.5rem;
-    font-weight: 600;
     text-align: center;
     gap: .5rem;
     padding: 2rem;
+}
+
+.form-submission-container span {
+    font-weight: 600;
 }
 
 .NB-description {
@@ -482,4 +493,165 @@ a {
 
 .footer-logos-container img {
     height: 100px;
+}
+
+/*Responsiveness*/
+/*Tablet*/
+@media (max-width:1200px) {
+    .header-main-container {
+        padding-bottom: 4rem;
+        height: auto;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-container {
+        text-align: center;
+        width: 80%;
+    }
+
+    .speakers-container ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+    }
+}
+
+@media (max-width:1000px) {
+    .title-container span:first-child {
+        font-size: 3, 5rem;
+    }
+
+    .title-container span:nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .call-for-participation-container b,
+    .outcomes-container b,
+    .speakers-container b,
+    .important-dates-container b,
+    .form-submission-container b,
+    .professor-about-info b,
+    .background-title,
+    .objectives-title {
+        font-size: 1.2rem;
+    }
+
+    .event-details-title {
+        font-size: 1.2rem;
+    }
+
+    .event-details-container {
+        font-size: 1rem;
+    }
+
+    .about-organizers-buttons-container button,
+    .form-submission-container button {
+        font-size: .9rem;
+    }
+
+    .call-for-participation-container span,
+    .background-description,
+    .objectives span,
+    .expected-outcomes li,
+    .prof-name-container span:first-child {
+        font-size: 1rem;
+    }
+
+    .date {
+        font-size: 2rem;
+    }
+
+    .day-and-info span {
+        font-size: 1rem;
+    }
+
+    .footer-logos-container {
+        width: 100%;
+        padding: 2rem;
+        margin: auto;
+    }
+
+    .logos-container {
+        width: 100%;
+    }
+
+    .footer-logos-container img {
+        max-width: 500px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logos-container img {
+        max-width: 400px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .objectives,
+    .expected-outcomes {
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:500px) {
+    .about-organizers-buttons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:460px) {
+    .important-dates li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .outcomes-container {
+        text-align: center;
+    }
+
+    .outcomes-short-description {
+        line-height: 2.5rem;
+    }
+
+    .event-details-container {
+        text-align: center;
+    }
+
+    .event-location,
+    .event-dates {
+        display: flex;
+        gap: .6rem;
+        font-size: .9rem;
+        text-align: left;
+    }
+
+    .event-dates img,
+    .event-location img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .about-organizers-buttons {
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .event-details-main-container {
+        padding: 2rem;
+    }
+
+    .event-details-title,
+    .organizers-title {
+        font-size: 1rem;
+    }
+    .title-container span:first-child{
+        font-size: 2.7rem;
+    }
 }
