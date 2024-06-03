@@ -45,19 +45,8 @@ a {
     display: none;
 }
 
-#close-button,
-#close-button-1,
-#close-button-2 {
-    margin: 0rem auto 1rem auto;
-    padding: .5rem 1rem;
-    background-color: #890000;
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-}
-
 .prof-container {
+    position: relative;
     background-color: white;
     max-width: 60rem;
     width: 90%;
@@ -67,6 +56,21 @@ a {
     padding: 2rem;
     border-radius: 5px;
 }
+
+#close-button,
+#close-button-1,
+#close-button-2 {
+    position: fixed;
+    padding: .5rem 1rem;
+    background-color: #890000;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    top: 1rem;
+}
+
+
 
 .professor-image-container img {
     width: 350px;

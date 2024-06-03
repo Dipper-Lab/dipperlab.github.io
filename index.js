@@ -31,7 +31,8 @@ document.getElementById("close-button-1").onclick = function () {
 document.getElementById("close-button-2").onclick = function () {
   closeModal("third-prof-modal");
 };
-// // When the user clicks anywhere outside of the modal, close it
+
+// When the user clicks anywhere outside of the modal content, close it
 window.onclick = function (event) {
   if (event.target.classList.contains("modal")) {
     event.target.style.display = "none";
