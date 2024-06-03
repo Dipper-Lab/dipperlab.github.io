@@ -602,8 +602,11 @@ a {
     .prof-container {
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
     }
-
+.professor-about-info{
+    overflow:unset;
+}
     .professor-info {
         display: flex;
         flex-direction: column;
