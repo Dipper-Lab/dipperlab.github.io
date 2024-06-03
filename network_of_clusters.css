@@ -59,8 +59,10 @@ a {
 
 .prof-container {
     background-color: white;
-    width: 60rem;
-    height: 55rem;
+    max-width: 60rem;
+    width: 90%;
+    max-height: 55rem;
+    height: 95%;
     z-index: 10;
     padding: 2rem;
     border-radius: 5px;
@@ -596,6 +598,34 @@ a {
         display: flex !important;
         flex-wrap: wrap;
     }
+
+    .prof-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .professor-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prof-info {
+        align-self: baseline;
+    }
+
+    .professor-image-container img {
+        max-width: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width:700px) {
+    .professor-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width:500px) {
@@ -651,7 +681,8 @@ a {
     .organizers-title {
         font-size: 1rem;
     }
-    .title-container span:first-child{
+
+    .title-container span:first-child {
         font-size: 2.7rem;
     }
 }
